@@ -1,9 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Boton from './Boton';
 
 function App() {
-  const [count, setCount] = useState(0);
+  let [count, setCount] = useState(524);
   const sum = () => {
     setCount(count + 1);
     console.log(count)
@@ -11,21 +14,12 @@ function App() {
   const nombre = "Hugo Reyes";
   const elemento = <h1>Hello, {nombre}</h1> 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{count}</p>
-        <button onClick={sum}>add</button>
-        <p>{elemento}</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>
+      <Boton name={"suma"} />
+      <Boton name={} />
+      <Boton name={} />
+      <Footer/>
     </div>
   );
 }
