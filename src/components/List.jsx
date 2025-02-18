@@ -1,15 +1,14 @@
 import React from 'react'
-import Item from './Item';
+import Item from "./item";
 
-const List = ({ items, ondelete }) => {
-  return( 
+const List = ({items, ondelete}) => {
+  return (
     <>
-        {items.map((i) => (
-            <Item item={i} key={i.id}
-            ondelete={ondelete}/>
-        ))}
+      {items.map((i)=> (
+        <Item item={i} key={i.id} ondelete={ondelete} />
+      ))}
     </>
-  );
-};
+  )
+}
 
-export default List;
+export default List
